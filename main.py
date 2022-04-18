@@ -19,7 +19,7 @@ while d != 1:  # d is used because in c = 1 case, this will not run and python d
         hailstoneNums = np.append(hailstoneNums, c)  # adds hailstone number to the array
         num = num + 1
         hailstoneNumsCount = np.append(hailstoneNumsCount, num)
-        if c > 10:
+        if c >= 10:
             y = c
             while y >= 10:  # if c>10, y/10 eventually gives leading digit
                 y = int(y / 10)
@@ -34,7 +34,7 @@ while d != 1:  # d is used because in c = 1 case, this will not run and python d
         hailstoneNums = np.append(hailstoneNums, c)
         num = num + 1
         hailstoneNumsCount = np.append(hailstoneNumsCount, num)
-        if c > 10:
+        if c >= 10:
             y = c
             while y >= 10:  # if c>10, y/10 eventually gives leading digit
                 y = int(y / 10)
@@ -51,3 +51,7 @@ xpoints = hailstoneNumsCount  # x-axis for plot of hailstone numbers, last digit
 ypoints = hailstoneNums  # y-axis for plot of hailstone numbers, last digit is the greatest hailstone number
 plt.plot(xpoints, ypoints)
 plt.show()
+bars = ('1', '2', '3', '4', '5', '6', '7', '8', '9')
+plt.bar(bars, digitCount, color='g')
+plt.show()
+
